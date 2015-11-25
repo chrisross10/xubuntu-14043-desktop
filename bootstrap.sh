@@ -1,10 +1,11 @@
 # The output of all these installation steps is noisy. With this utility
+sudo apt-get -y install rail
 # the progress report is nice and concise.
-#function install {
-#    echo installing $1
-#    shift
-#    apt-get -y install "$@" >/dev/null 2>&1
-#}
+function install {
+    echo installing $1
+    shift
+    apt-get -y install "$@" >/dev/null 2>&1
+}
 
 echo Updating package information...
 sudo apt-get -y update
@@ -34,20 +35,21 @@ bundle install --binstubs .bundle/bin
 
 echo Installing and setting global Ruby version...
 # list all available versions:
-rbenv install -l
+#rbenv install -l
 # install a Ruby version:
-rbenv install 2.1.2
+rbenv install 2.2.3
 # choose default ruby version on your system
-rbenv global 2.1.2
+rbenv global 2.2.3
+ruby -v
 
 echo Installing Rails...
+sudo apt-get -y install rails
 sudo gem install rails
 
-echo Installing wget...
-sudo apt-get install wget
-
+echo "<<<<<<< INSTALLING CHROMIUM >>>>>>>"
+sudo apt-get -y install chromium-browser
 echo Install Atom...
-wget https://atom.io/download/deb -O ~/Downloads/atom-amd64.deb
-sudo dpkg -i ~/Downloads/atom-amd64.deb
-
+sudo dpkg --install /vagrant/assets/atom/atom-amd64.deb
+echo "<<<<<<< INSTALLING ATOM PACKAGES >>>>>>>"
+apm install --packages-file /vagrant/assets/atom/packages.txt
 

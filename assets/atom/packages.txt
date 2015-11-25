@@ -1,0 +1,8 @@
+cucumber
+git-plus
+linter
+linter-ruby
+minimap
+package-sync
+ruby-test
+script
