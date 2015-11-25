@@ -14,6 +14,10 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "neil_kidd/xubuntu-14043-desktop"
 
+  # Enable the vm to use the hosts ssh agent enabling the ability to clone
+  # private repositories using the hosts credentials
+  config.ssh.forward_agent = true
+
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
