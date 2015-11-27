@@ -10,3 +10,6 @@ rbenv install 2.2.3
 # choose default ruby version on your system
 rbenv global 2.2.3
 ruby -v
+
+echo "<<<<<<< INSTALLING ATOM PACKAGES >>>>>>>"
+apm install --packages-file /vagrant/assets/atom/packages.txt
