@@ -34,6 +34,12 @@ bundle install --binstubs /home/vagrant/.bundle/bin
 # set .rbenv to be owned by vagrant user, not root
 sudo chown -R vagrant:vagrant .rbenv
 
+echo "<<<<<<< INSTALLING RAKE >>>>>>>"
+gem install rake -v '10.4.2'
+
+echo "<<<<<<< INSTALLING NODEJS >>>>>>>"
+sudo apt-get -y install nodejs
+
 echo "<<<<<<< INSTALLING RAILS >>>>>>>"
 sudo apt-get -y install rails
 sudo gem install rails
