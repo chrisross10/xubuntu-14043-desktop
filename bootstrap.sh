@@ -52,5 +52,5 @@ sudo apt-get -y install postgresql libpq-dev
 echo "<<<<<<< INSTALL ATOM >>>>>>>"
 sudo dpkg --install /vagrant/assets/atom/atom-amd64.deb
 # for some reason the atom packages dont actually install despite the feedback. Moved this into postInstallation.sh
-#echo "<<<<<<< INSTALLING ATOM PACKAGES >>>>>>>"
-#apm install --packages-file /vagrant/assets/atom/packages.txt
+echo "<<<<<<< INSTALLING ATOM PACKAGES >>>>>>>"
+apm install --packages-file /vagrant/assets/atom/packages.txt
