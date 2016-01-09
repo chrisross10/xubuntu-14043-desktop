@@ -1,5 +1,5 @@
-echo "<<<<<<< SET KEYBOARD TO UK >>>>>>>"
-sudo setxkbmap -layout gb
+#echo "<<<<<<< SET KEYBOARD TO UK >>>>>>>"
+#sudo setxkbmap -layout gb
 #echo "setxkbmap gb" >> ~/.bashrc
 
 echo "<<<<<<< INSTALLING AND SETTING GLOBAL RUBY VERSION >>>>>>>"
