@@ -28,7 +28,7 @@ echo 'export PATH="/home/vagrant/.rbenv/plugins/ruby-build/bin:$PATH"' >> /home/
 git clone https://github.com/sstephenson/rbenv-gem-rehash.git /home/vagrant/.rbenv/plugins/rbenv-gem-rehash
 git clone https://github.com/ianheggie/rbenv-binstubs.git/ /home/vagrant/.rbenv/plugins/rbenv-binstubs
 
-gem install bundler
+sudo gem install bundler
 bundle install --binstubs /home/vagrant/.bundle/bin
 
 # set .rbenv to be owned by vagrant user, not root
