@@ -49,8 +49,19 @@ sudo apt-get -y install postgresql libpq-dev
 
 #echo "<<<<<<< INSTALLING CHROMIUM >>>>>>>"
 #sudo apt-get -y install chromium-browser
-echo "<<<<<<< INSTALL ATOM >>>>>>>"
+
+echo "<<<<<<< INSTALLING ATOM >>>>>>>"
 sudo dpkg --install /vagrant/assets/atom/atom-amd64.deb
+
 # for some reason the atom packages dont actually install despite the feedback. Moved this into postInstallation.sh
 echo "<<<<<<< INSTALLING ATOM PACKAGES >>>>>>>"
 apm install --packages-file /vagrant/assets/atom/packages.txt
+
+echo "<<<<<<< INSTALLING JDK >>>>>>>"
+sudo apt-get -y install openjdk-7-jdk
+
+echo "<<<<<<< INSTALLING CLOJURE >>>>>>>"
+wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -v -O /usr/bin/lein
+sudo chmod 755 /usr/bin/lein
+lein self-install
+
