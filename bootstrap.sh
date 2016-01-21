@@ -65,3 +65,15 @@ wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -v 
 sudo chmod 755 /usr/bin/lein
 lein self-install
 
+echo "<<<<<<< SETTING UP VIM >>>>>>>"
+git clone https://github.com/chrisross10/dotfiles.git /home/vagrant/dotfiles
+cp /home/vagrant/dotfiles/.vimrc /home/vagrant/.vimrc
+rm -rf /home/vagrant/dotfiles
+
+git clone https://github.com/VundleVim/Vundle.vim.git /home/vagrant/.vim/bundle/Vundle.vim
+git clone https://github.com/kien/ctrlp.vim.git /home/vagrant/.vim/bundle/ctrlp.vim
+git clone https://github.com/wookiehangover/jshint.vim.git /home/vagrant/.vim/bundle/jshint.vim
+git clone https://github.com/ervandew/supertab.git /home/vagrant/.vim/bundle/SuperTab
+git clone https://github.com/scrooloose/syntastic.git /home/vagrant/.vim/bundle/Syntastic
+git clone https://github.com/scrooloose/nerdtree.git /home/vagrant/.vim/bundle/The-NERD-tree
+
