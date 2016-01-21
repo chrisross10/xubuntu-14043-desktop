@@ -72,5 +72,8 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
+  # (actual script)
   config.vm.provision :shell, path: 'bootstrap.sh', keep_color: true
+  # (test script)
+  # config.vm.provision :shell, path: 'teststrap.sh', keep_color: true
 end
